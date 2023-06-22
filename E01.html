@@ -6,7 +6,16 @@
     //Contudo, caso o aluno que ajudou (TUTOR) obteve maior nota, bonifique-o com um adicional de 10% da nota do aluno ajudado, e o programa apresentará a mensagem "CONTINUE ENSINANDO!" e também apresentará a nota final do aluno que ajudou (TUTOR).
 
     //ENTRADA
+    let notaTutor = Number(prompt("Informe a nota que o Tutor obteve no terceiro trimestre!").trim().replace(",","."));
+    const notaAjudado = Number(prompt("Informe a nota que o aluno ajudado obteve no terceiro trimestre!").trim().replace(",","."));
 
+    if (notaAjudado > notaTutor) {
+        document.write(`Cria maior que o criador! A nota do aluno ajudado é ${notaAjudado}`);
+    } else {
+     const bonus = ((notaAjudado*10)/100);
+     notaTutor = notaTutor + bonus;
+     document.write(`Continue ensinando! A nota do Tutor com bônus é ${notaTutor.toFixed(1).replace(".",",")}!`)
+    }
 
     //PROCESSAMENTO
 

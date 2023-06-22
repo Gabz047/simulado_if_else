@@ -9,8 +9,32 @@
     */
 
     //ENTRADA
+   const consultafacil = Number(prompt("Informe quantas consultas de baixa complexidade você atende por dia!"))
+   const consultamedia = Number(prompt("Informe quantas consultas de média complexidade você atende por dia!"))
+   const consultadificil = Number(prompt("Informe quantas consultas de alta complexidade você atende por dia!"))
 
+   const tempoConFacil  = consultafacil*15
+   const tempoConMédia = consultamedia*40
+   const tempoConDificil = consultadificil*75
+   const tempototal = (tempoConFacil + tempoConMédia + tempoConDificil)/60
 
+    var minutos = (tempototal - tempototal)/60;
+    var horas = Math.trunc(tempototal);
+
+   if (tempototal <= 24)  {
+   if (tempototal < 8) {
+      let salario = tempototal*50
+      document.write(`Você trabalha ${horas} horas e ${minutos} minutos e receberá R$${salario.toFixed(2).replace(".",",")}`)
+   } else if (tempototal >= 8 && tempototal <= 10) {
+    let salario = tempototal*75
+      document.write(`Você trabalha ${horas} horas e ${minutos} minutos e receberá R$${salario.toFixed(2).replace(".",",")}`)
+   } else if (tempototal > 10) {
+    let salario = tempototal*90
+      document.write(`Você trabalha ${horas} horas e ${minutos} minutos e receberá R$${salario.toFixed(2).replace(".",",")}`)
+   }
+   } else {
+    document.write("Vá descansar")
+   }
     //PROCESSAMENTO
 
     
