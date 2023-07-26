@@ -5,12 +5,11 @@
     //Considere que o custo diário de viagem para "RS" será de R$ 180,00 (180) e o custo diário de viagem para "MG" será de R$ 210,00 (210).
     
     //Calcule se o usuário possui dinheiro suficiente para realizar a viagem para o destino que pretende. Se o usuário puder viajar, o programa apresentará a mensagem "Boa viagem" e quantos dias poderá ficar no destino, além de qual será o custo da viagem. Caso não possa viajar o programa apresentará a mensagem "Sem Férias" e também apresentará "quantos dinheiros" (R$) estão faltando para realizar a viagem.
-
-    //ENTRADA
+    
     const qualEstado = prompt("Para qual estado você pretende viajar, Minas Gerais(MG) ou Rio Grande do Sul(RS)?").trim().toUpperCase()
     const quantDias = Number(prompt("Quantos dias você ficará de viagem?").trim())
     const moneyMoney = Number(prompt("Quanto dinheiro você tem para gastar na viagem?").trim().replace(",","."));
-    //PROCESSAMENTO
+  
     if (qualEstado == "MG" || qualEstado =="RS") {
         if(qualEstado == "MG") {
             let diaria = quantDias*210
@@ -31,11 +30,7 @@
                 document.write(`sem férias! Vocẽ não tem dinheiro suficiente para realizar essa viagem, pois falta R$${faltoMoney.toFixed(2).replace(".",",")}.`)
             }
         }
-
     } else {
         document.write("Você só pode viajar para RS ou MG meu caro amigo!")
     }
-
-    //SAÍDA
-
 </script>
